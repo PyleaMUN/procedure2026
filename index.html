@@ -41,6 +41,13 @@
       color: var(--teal);
       margin-top: 1.5rem;
     }
+    /* Added h4 style */
+    h4 {
+      color: var(--teal);
+      margin-top: 1.5rem;
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+    }
     .faq dt {
       font-weight: bold;
       margin-top: 1rem;
@@ -63,6 +70,13 @@
     .flashing-note a {
       font-weight: bold;
       color: #856404;
+    }
+    /* Added small font for tables */
+    .table-sm {
+      font-size: 0.9rem;
+    }
+    .table-responsive {
+      margin-top: 1rem;
     }
   </style>
 </head>
@@ -114,42 +128,246 @@
     </ul>
 
     <h3>III. Committee Flow</h3>
-    <ul>
-      <li><strong>Roll Call:</strong> At the beginning of each session, the Chair will conduct roll call. Delegates respond “Present” or “Present and Voting.”</li>
-      <li><strong>Setting the Agenda:</strong> If multiple topics are on the agenda, delegates propose and vote on the topic order.</li>
-      <li><strong>Debate Format:</strong>
-        <ul>
-          <li><em>Formal Debate:</em> Speeches follow the Speaker’s List.</li>
-          <li><em>Moderated Caucus:</em> Timed speeches on a specific sub-topic.</li>
-          <li><em>Unmoderated Caucus:</em> Informal discussions for negotiation and drafting resolutions.</li>
-        </ul>
-      </li>
-    </ul>
+    <p>Roll Call → Policy Statements → Lobbying → Formal Debate (Open/Closed) → Amendments → Voting</p>
 
     <h3>IV. Points and Motions</h3>
-    <ul>
-      <li><strong>Point of Personal Privilege:</strong> For physical discomfort (e.g., unable to hear).</li>
-      <li><strong>Point of Order:</strong> For procedural error by Chair or delegate.</li>
-      <li><strong>Point of Parliamentary Inquiry:</strong> To ask about the Rules of Procedure.</li>
-      <li><strong>Motion to Set the Agenda:</strong> Initiates the debate topic.</li>
-      <li><strong>Motion to Move into Moderated/Unmoderated Caucus:</strong> Requires simple majority.</li>
-      <li><strong>Motion to Close Debate:</strong> Ends debate on the topic/resolution and moves to voting.</li>
-      <li><strong>Motion to Suspend/Adjourn Session:</strong> Suspends for a break or ends the committee.</li>
-    </ul>
+    
+    <h4>Motions</h4>
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm">
+        <thead>
+          <tr>
+            <th>Motion</th>
+            <th>Debatable?</th>
+            <th>Interrupt Speaker?</th>
+            <th>Vote Required?</th>
+            <th>Explanation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Motion to Move to Closed Debate</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Simple Majority</td>
+            <td>Divides debate time into “time in favour” and “time against”.</td>
+          </tr>
+          <tr>
+            <td>Motion to Move to Open Debate</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Simple Majority</td>
+            <td>Allows any delegate to take the floor freely regardless of their position on the topic. </td>
+          </tr>
+          <tr>
+            <td>Motion to Move to the Previous Question</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Simple Majority</td>
+            <td>End debate on current amendment/resolution → move to vote.</td>
+          </tr>
+          <tr>
+            <td>Motion to Adjourn Debate</td>
+            <td>Yes (1 for, 1 against)</td>
+            <td>No</td>
+            <td>Simple Majority</td>
+            <td>Suspend debate on a resolution; effectively kills it.</td>
+          </tr>
+          <tr>
+            <td>Motion to Reconsider</td>
+            <td>Yes (submitter explains)</td>
+            <td>No</td>
+            <td>2/3 Majority</td>
+            <td>Reopen a previously adjourned resolution.</td>
+          </tr>
+          <tr>
+            <td>Motion to Suspend the Meeting</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Simple Majority</td>
+            <td>"Used for breaks (lunch, end of day)."</td>
+          </tr>
+          <tr>
+            <td>Motion to Adjourn the Meeting</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>Simple Majority</td>
+            <td>Ends the committee session permanently.</td>
+          </tr>
+          <tr>
+            <td>Motion to Limit/Extend Debate Time</td>
+            <td>No</td>
+            <td>No</td>
+            <td>2/3 Majority</td>
+            <td>Alters debate time limits.</td>
+          </tr>
+          <tr>
+            <td>Motion to Divide the House</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Second required</td>
+            <td>Repeats voting without abstentions.</td>
+          </tr>
+          <tr>
+            <td>Motion to Divide the Question</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>2/3 Majority</td>
+            <td>Divide a draft resolution into parts or vote on each clause separately.</td>
+          </tr>
+          <tr>
+            <td>Motion to Follow-Up</td>
+            <td>No</td>
+            <td>No</td>
+            <td>—</td>
+            <td>Used after a point of information; must be approved by the Chairs (only once).</td>
+          </tr>
+          <tr>
+            <td>Motion to Extend Points of Information</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Second required</td>
+            <td>Extend the number of points of information; must be approved by Chairs and speaker.</td>
+          </tr>
+          <tr>
+            <td>Motion to Approach the Chairs</td>
+            <td>No</td>
+            <td>No</td>
+            <td>—</td>
+            <td>Used when a delegate wishes to speak privately with the Chairs.</td>
+          </tr>
+          <tr>
+            <td>Motion to Reconsider a Resolution</td>
+            <td>No</td>
+            <td>No</td>
+            <td>2/3 Majority</td>
+            <td>Specialized agencies only; re-debate a previously discussed resolution.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>Points</h4>
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm">
+        <thead>
+          <tr>
+            <th>Point</th>
+            <th>Debatable?</th>
+            <th>Interrupt Speaker?</th>
+            <th>Vote Required?</th>
+            <th>Explanation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Point of Personal Privilege</td>
+            <td>No</td>
+            <td>Yes (only due to audibility)</td>
+            <td>No</td>
+            <td>Use when you can’t hear or need physical comfort.</td>
+          </tr>
+          <tr>
+            <td>Point of Order</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>Used to correct a procedural mistake by the Chair or another delegate.</td>
+          </tr>
+          <tr>
+            <td>Point of Information (to the Speaker)</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Ask the speaker a question after their speech.</td>
+          </tr>
+          <tr>
+            <td>Point of Parliamentary Inquiry</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Ask the Chair about the rules of procedure.</td>
+          </tr>
+          <tr>
+            <td>Right of Reply</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Chair’s Decision</td>
+            <td>Used if your country’s honor or integrity is insulted; must be approved by the Chair.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <h3>V. Resolutions and Amendments</h3>
     <ul>
       <li><strong>Working Paper:</strong> Informal draft of a resolution.</li>
       <li><strong>Draft Resolution:</strong> Requires a minimum number of sponsors and signatories to be introduced.</li>
-      <li><strong>Amendments:</strong>
-        <ul>
-          <li><em>Friendly:</em> Accepted by all sponsors, no vote needed.</li>
-          <li><em>Unfriendly:</em> Requires debate and vote.</li>
-        </ul>
-      </li>
+      <li><strong>Amendments:</strong></li>
     </ul>
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Need Submitter’s Approval?</th>
+            <th>Debated?</th>
+            <th>Voted On?</th>
+            <th>Explanation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Friendly Amendment</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Accepted by submitter — added automatically.</td>
+          </tr>
+          <tr>
+            <td>Unfriendly Amendment</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Opposed by the submitter — debated and voted on before resolution.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <h3>VI. Voting Procedure</h3>
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm">
+        <thead>
+          <tr>
+            <th>Type of Vote</th>
+            <th>Who Votes</th>
+            <th>Abstentions Allowed?</th>
+            <th>Explanation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Procedural</td>
+            <td>All delegates</td>
+            <td>No</td>
+            <td>"Concerns debate procedure (e.g., motions)."</td>
+          </tr>
+          <tr>
+            <td>Substantive</td>
+            <td>Only member states</td>
+            <td>Yes</td>
+            <td>"Concerns content (resolutions, amendments)."</td>
+          </tr>
+          <tr>
+            <td>Majority Required</td>
+            <td>—</td>
+            <td>—</td>
+            <td>Usually simple majority (50% + 1).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <ul>
       <li><strong>Simple Majority:</strong> Most decisions (e.g., resolutions, amendments).</li>
       <li><strong>Two-Thirds Majority:</strong> For major decisions if specified (e.g., closing debate).</li>
@@ -167,8 +385,8 @@
       <dt>3. Can I use notes or bring research materials?</dt>
       <dd>Yes, you are encouraged to bring prepared notes, position papers, and research documents.</dd>
 
-      <dt>4. What is a Position Paper?</dt>
-      <dd>It’s a short document outlining your country’s stance on the agenda topics. Some committees may require it for awards eligibility.</dd>
+      <dt>4. What is a policy statement?</dt>
+      <dd>It’s a concise speech summarising your understanding of the topic while clearly outlining your country's policy.</dd>
 
       <dt>5. What happens if I miss a session?</dt>
       <dd>Attendance is strongly encouraged. Excessive absence may affect your eligibility for awards or speaking rights.</dd>
@@ -176,7 +394,7 @@
       <dt>6. How do awards work?</dt>
       <dd>Committees grant awards like Best Delegate, Outstanding Delegate, Honorable Mention. Criteria include diplomacy, speaking, teamwork, and adherence to procedure.</dd>
 
-      <dt>7. Can I speak freely during unmoderated caucuses?</dt>
+      <dt>7. Can I speak freely during lobbying?</dt>
       <dd>Yes, but always remain respectful. Chairs may intervene if decorum breaks down.</dd>
 
       <dt>8. Are there social events?</dt>
@@ -185,7 +403,7 @@
       <dt>9. How are country assignments decided?</dt>
       <dd>Assignments consider preferences, experience, and availability. You’ll receive your assignment via email before the conference.</dd>
 
-      <dt>10. What if I have a question during committee?</dt>
+      <dt>10. What if I have a question during the committee?</dt>
       <dd>Raise a Point of Parliamentary Inquiry to ask the Chair.</dd>
     </dl>
   </div>
